@@ -4,17 +4,17 @@ pipeline {
     stages {
         stage('clone') {
             steps {
-               git branch: 'main', credentialsId: 'c16586ce-a7f8-47c6-a84b-481e578c632e', url: 'https://github.com/prathameshgadgil660-dot/helloworld.git'
+               git branch: 'main', credentialsId: 'c16586ce-a7f8-47c6-a84b-481e578c632e', url: 'https://github.com/prathameshgadgil660-dot/experiment4.git'
             }
         }
          stage('compile') {
             steps {
-                bat 'javac HelloWorld.java'
+                bat 'javac hello.java'
             }
 }
             stage('run') {
             steps {
-                bat 'java HelloWorld'
+                bat 'java hello'
             }
         }
     }
